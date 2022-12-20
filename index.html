@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>LoL Card Game</title>
+      
+    
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="images/runeterra-ionia-01.jpg" >
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/estilos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="bienvenida" class="bienvenida">
+      <h1>League Of Legends <br>Card Game</h1>
+      <div class="bienvenida-botones">
+        <button id="juego-normal">Quick game</button>
+        <button id="juego-relax">Relax mode</button><br><br>
+        <button id="juego-extra1">Hard mode</button>
+        <button id="juego-extra2">Only Move mode</button>
+      </div>
+    </div>
+    <header class="cabecera">
+      <div id="contadores" class="contadores">
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Movements</h4>
+          <div class="cabecera-num">
+            <span id="mov">00</span>/<span id="mov-total">20</span>
+          </div>
+        </div>
+        <div id="cronometro" class="contador-item">
+          <h4 class="cabecera-titulo">Time</h4>
+          <div class="cabecera-num">
+            <span id="minutos">00</span>:<span id="segundos">00</span>
+          </div>
+        </div>
+      </div>
+      <a href="index.html"><button id="boton-menu" class="boton-menu">Menu</button></a>
+      <div class="nivel">
+        <h4 class="cabecera-titulo">Level</h4>
+        <div class="cabecera-num"><span id="nivel">01</span></div>
+      </div>
+      <button id="control-nivel" class="control-nivel">…</button>
+    </header>
+    <main>
+      <div id="mesa" class="mesa"></div>
+      <div id="subeNivel" class="sube-nivel">
+        <div class="modal">
+          <h2>Well Played!</h2>
+          <button id="subir">Next Level</button>
+          <button class="reiniciar">Restart</button>
+        </div>
+      </div>
+      <div id="gameOver" class="game-over">
+        <div class="modal">
+          <h2>Oh no!</h2>
+          <p>You don’t have any more moves </p>
+          <button class="reiniciar">Restart</button>
+        </div>
+      </div>
+      <div id="timeOver" class="game-over">
+        <div class="modal">
+          <h2>Oh no!</h2>
+          <p>You are out of time </p>
+          <button class="reiniciar">Restart</button>
+        </div>
+      </div>
+      <div id="endGame" class="end-game">
+        <div class="modal">
+          <h2>Congratulations!</h2>
+          <p>You have passed all the levels </p>
+          <button class="reiniciar">Restart</button>
+        </div>
+      </div>
+    </main>
+    <div class="selecciona-nivel">
+      <button id="cierra-niveles" class="cierra-niveles">&times;</button>
+      <ul></ul>
+    </div>
+      <audio
+      src="sonidos/acierto.mp3"
+      class="sonido"
+      id="sonido-acierto"
+      preload="auto"
+    ></audio>
+    <audio
+      src="sonidos/error.mp3"
+      class="sonido"
+      id="sonido-error"
+      preload="auto"
+    ></audio>
+    <audio
+      src="sonidos/carta.mp3"
+      class="sonido"
+      id="sonido-carta"
+      preload="auto"
+    ></audio>
+
+    <script src="js/variables-globales.js"></script>
+    <script src="js/descubrir-comparar.js"></script>
+    <script src="js/baraja-reparte.js"></script>
+    <script src="js/acierto-error.js"></script>
+    <script src="js/contador.js"></script>
+    <script src="js/cronometro.js"></script>
+    <script src="js/finalizar.js"></script>
+    <script src="js/cambia-nivel.js"></script>
+    <script src="js/game-over.js"></script>
+    <script src="js/menu-niveles.js"></script>
+    <script src="js/iniciar.js"></script>
+    <script src="js/comienza-juego.js"></script>
+  </body>
+</html>
